@@ -8,7 +8,7 @@ Uses `golang:1.11` Docker image with `CGO_ENABLED=0` flag.
 
 Basic usage:
 
-```
+```text
 action "build" {
   uses = "sosedoff/actions/golang-build@master"
 }
@@ -18,11 +18,11 @@ Basic workflow configuration will compile binaries for the following platforms:
 
 - linux: 386/amd64
 - darwin: 386/amd64
-- windows: 386/amd64 
+- windows: 386/amd64
 
 Alternatively you can provide a list of target architectures in `arg`:
 
-```
+```text
 action "build" {
   uses = "sosedoff/actions/golang-build@master"
   args = "linux/amd64 darwin/amd64"
@@ -31,7 +31,7 @@ action "build" {
 
 Example output:
 
-```
+```text
 ----> Setting up Go repository
 ----> Building project for: darwin/amd64
   adding: test-go-action_darwin_amd64 (deflated 50%)
