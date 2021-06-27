@@ -2,7 +2,7 @@
 
 Github Action to cross-compile Go project binaries for multiple platforms in a single run.
 
-Uses `golang:1.11` Docker image with `CGO_ENABLED=0` flag.
+Uses `golang:1.16` Docker image with `CGO_ENABLED=0` flag.
 
 ## Usage
 
@@ -10,7 +10,7 @@ Basic usage:
 
 ```text
 action "build" {
-  uses = "sosedoff/actions/golang-build@master"
+  uses = "rikwatson/actions/golang-build@master"
 }
 ```
 
@@ -18,6 +18,7 @@ Basic workflow configuration will compile binaries for the following platforms:
 
 - linux: 386/amd64
 - darwin: 386/amd64
+- darwin: ARM
 - windows: 386/amd64
 
 Alternatively you can provide a list of target architectures in `arg`:
